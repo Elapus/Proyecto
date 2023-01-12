@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/','InicioController@index')->name('inicio');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/fiboc','FibonacciController@index')->name('fibonacci');
+
+Route::get('/fact','FactorialController@index')->name('factorial');
+
+Route::get('/poli','PolindromoController@index')->name('polindromo');
