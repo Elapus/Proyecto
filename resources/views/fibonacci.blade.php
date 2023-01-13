@@ -37,7 +37,7 @@
         <div class="prin container-fluid">
             <br>
             <div class="title">Fibonacci</div>
-            <form action="" method="POST">
+            <form action="/fibocre" method="POST">
             @csrf 
                 <div>
                     <br>
