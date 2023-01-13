@@ -30,7 +30,7 @@
     </head>
     <body>
         <div class="prin container-fluid">
-            <form action="" method="POST">
+            <form action="/factcre" method="POST">
             @csrf 
                 <div>Factorial
                     <br>
