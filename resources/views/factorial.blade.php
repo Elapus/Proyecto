@@ -26,13 +26,19 @@
                 background-color: rgb(177, 174, 174);
                 border-radius: 30px;
             }
+            .title{
+                background-color: rgba(177, 0, 177, 0.678); 
+                border-radius: 30px;
+            }
         </style>
     </head>
     <body>
         <div class="prin container-fluid">
+            <br>
+            <div class="title">Fibonacci</div>
             <form action="/factcre" method="POST">
             @csrf 
-                <div>Factorial
+                <div>
                     <br>
                     <br>
                     <label for="num">Digite el numero a factorizar</label>

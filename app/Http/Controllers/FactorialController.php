@@ -15,12 +15,7 @@ class FactorialController extends Controller
         return view ('/factorial',['valor'=>$valor],['resultado'=>$resultado]);
     }
 
-    public function final($valor){
-        if ($valor>0) {
-           $resultado = $valor *$this->final($valor -1);
-        }else{
-            $resultado =1;
-        }
+    public function final($valor){($valor>0) ? $resultado=$valor *$this->final($valor -1):$resultado =1;
         return $resultado;
     }
 
