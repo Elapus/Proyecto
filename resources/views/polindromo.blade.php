@@ -36,7 +36,7 @@
         <div class="prin container-fluid">
             <br>
             <div class="title">Polindromos</div>
-            <form action="" method="POST">
+            <form action="/policre" method="POST">
             @csrf 
                 <div>
                     <label for="num"></label>
@@ -48,13 +48,8 @@
                 </div>    
             </form>
             <br>
-            @isset($palbra, $palbra1)
-            La palabra {{$palbra}}
-            @if ($palbra == $palbra1)
-                {{" es palindroma"}}
-            @else
-                {{" no es palindroma"}}
-            @endif
+            @isset($palabra, $respuesta)
+            La palabra {{$palabra}}: {{$respuesta}}
             @endisset
             <br>
             <br>
