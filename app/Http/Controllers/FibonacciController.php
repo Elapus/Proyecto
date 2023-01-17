@@ -14,15 +14,23 @@ class FibonacciController extends Controller
         $b = 1;
         $c = 0;
         $i = 1;
-        $fibonacci =$request->fibonacci;
-        $resultado = '';
-        while ($i <= $fibonacci){
-            $resultado .= $c.",";
-            $c = $a+$b;
-            $a = $b;
-            $b = $c;
-            $i++;
-        }
+        $fibonacci=$request->fibonacci;
+        $resultado =$this->recur($fibonacci);
+        //while ($i <= $fibonacci){
+        //    $resultado .= $c.",";
+        //    $c = $a+$b;
+        //    $a = $b;
+        //    $b = $c;
+        //    $i++;
+        //}
         return view ('fibonacci', ['fibonacci'=>$resultado]);
+    }
+    public function recur($fibonacci){
+        if ($fibonacci == 0 or $fibonacci == 1) {
+            $resultado=$fibonacci;
+        } else {
+            $resultado=$this->recur($fibonacci-1)+ $this->recur($fibonacci-2);
+        }
+        return $resultado;
     }
 }
