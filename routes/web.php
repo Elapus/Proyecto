@@ -19,3 +19,5 @@ Route::get('/fiboc','FibonacciController@index')->name('fibonacci');
 Route::get('/fact','FactorialController@index')->name('factorial');
 
 Route::get('/poli','PolindromoController@index')->name('polindromo');
+
+Route::get('/simon','SimondiceController@index')->name('simondice');
