@@ -30,33 +30,87 @@
                 background-color: rgba(177, 0, 177, 0.678); 
                 border-radius: 30px;
             }
+            button.rojo{
+                width: 100px;
+                height: 100px;
+                margin: 30px;
+                border-radius: 30px;
+                border-color: black;
+                border-width: 10px;
+                background-color: red;
+            }
+            button:active.rojo{
+                box-shadow: 0px 0px 100px red;
+            }
+            .verde{
+                width: 100px;
+                height: 100px;
+                margin: 30px;
+                border-radius: 30px;
+                border-color: black;
+                border-width: 10px;
+                background-color: green;
+            } button:active.verde{
+                box-shadow: 0px 0px 100px green;
+            }
+            .azul{
+                width: 100px;
+                height: 100px;
+                margin: 30px;
+                border-radius: 30px;
+                border-color: black;
+                border-width: 10px;
+                background-color: blue;
+            } button:active.azul{
+                box-shadow: 0px 0px 100px blue;
+            }
+            .amarillo{
+                width: 100px;
+                height: 100px;
+                margin: 30px;
+                border-radius: 30px;
+                border-color: black;
+                border-width: 10px;
+                background-color: yellow;
+            } button:active.amarillo{
+                box-shadow: 0px 0px 100px yellow;
+            }
+            .morado{
+                width: 100px;
+                height: 100px;
+                margin: 30px;
+                border-radius: 30px;
+                border-color: black;
+                border-width: 10px;
+                background-color: #550d99;
+            } button:active.morado{
+                box-shadow: 0px 0px 100px #550d99;
+            }
+            .naranja{
+                width: 100px;
+                height: 100px;
+                margin: 30px;
+                border-radius: 30px;
+                border-color: black;
+                border-width: 10px;
+                background-color: #ff5100;
+            } button:active.naranja{
+                box-shadow: 0px 0px 100px #ff5100;
+            }
         </style>
     </head>
     <body>
         <div class="prin container-fluid">
             <br>
             <div class="title">Simondice</div>
-            <form action="" method="POST">
-            @csrf 
-                <div>
-                    <label for="num"></label>
-                    <br>
-                    <input class="rounded-pill" type="text" id="palindromo" name="palindromo" placeholder="# hasta donde termina" autofocus>
-                    <br>
-                    <br>
-                    <input class="btn btn-outline-success rounded-pill " type="submit" value="Resultados">
-                </div>    
-            </form>
             <br>
-            @isset($palbra, $palbra1)
-            La palabra {{$palbra}}
-            @if ($palbra == $palbra1)
-                {{" es palindroma"}}
-            @else
-                {{" no es palindroma"}}
-            @endif
-            @endisset
             <br>
+            <button class="rojo"></button>
+            <button class="verde"></button>
+            <button class="azul"></button>
+            <button class="amarillo"></button>
+            <button class="morado"></button>
+            <button class="naranja"></button>       
             <br>
             <br>
             <a href="{{route('inicio')}}"><button class="btn btn-outline-warning rounded-pill ">Regresar</button></a>
