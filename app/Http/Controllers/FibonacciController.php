@@ -12,14 +12,14 @@ class FibonacciController extends Controller
     public function fibocre(Request $request){
         $fibonacci=$request->fibonacci;
         $resultado=$this->proceso($fibonacci);
-    
         return view ('fibonacci', ['fibonacci'=>$resultado]);
     }
     public function proceso($fibonacci){
       for ($i=0; $i < $fibonacci ; $i++) { 
-        $resultado=$this->recur($i).",";
+        $resultado=$this->recur($i);
         echo $resultado;
-      }
+        }
+        return $resultado;
     }
     public function recur($fibonacci){($fibonacci == 0 or $fibonacci == 1) ? $resultado=$fibonacci: $resultado=$this->recur($fibonacci -1)+$this->recur($fibonacci-2);
         return $resultado;
