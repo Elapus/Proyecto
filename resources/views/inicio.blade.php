@@ -44,6 +44,10 @@
                     <a href="{{route('simondice')}}"><button class="btn btn-outline-dark rounded-pill">Simondice</button></a>
                 </div>
                 <br>
+                <div>
+                    <a href="{{route('dibujar')}}"><button class="btn btn-outline-dark rounded-pill">Dibujar</button></a>
+                </div>
+                <br>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
