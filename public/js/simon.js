@@ -1,68 +1,74 @@
-const nivel=document.getElementById('nivel');
-const botones=document.getElementsByClassName('boton');
-const iniciojuego=document.getElementById('inicio');
+var nivel = 1
+var nivelmax = 10
 
-class Simon{
-    constructor(botones,iniciojuego,nivel){
-        this.nivel=0;
-        this.userPosition=0;
-        this.rondas=10;
-        this.sequence=[];
-        this.speed= 1000;
-        this.blockButtons=true;
-        this.buttons=Array.from(botones);
-        this.display = {
-            iniciojuego,
-            nivel
-        }
-    }
-    init(){
-        this.display.iniciojuego.onclick=()=> this.inicio();
-    }
-    inicio(){
-        this.display.iniciojuego.disabled = true;
-        this.updateNivel(0);
-        this.userPosition=0;
-        this.sequence=this.crearsecuencia();
-        this.buttons.forEach((element, i)=>{
-            element.classList.remove('winner');
-            element.onclick=()=>this.buttonClick(i);  
-        });
-        this.showsecuencia();
-    }
+var // ->php
+var arrjuego  = secuenciaColor 
+var arrusuario = []
 
-    updateNivel(value){
-        this.nivel=value;
-        this.display.nivel.textContent = 'Nivel' + $this.nivel; 
-    }
-    crearSequence(){
-        return Array.from
-    }
-        
+var numnivel = document.getElementById ('nivel');  
+
+var btn = document.getElementById('1');
+var btn = document.getElementById('2');
+var btn = document.getElementById('3');
+var btn = document.getElementById('4');
+var btn = document.getElementById('5');
+var btn = document.getElementById('6');
+
+function inicio() {
+    mostrarSecuencia()
 }
-    // getRandomColor(){
+function mostrarSecuencia(){
+    if (nivel < nivelmax) {
+        numnivel.innerText='Nivel ' + nivel
+        nivel = nivel + 1
+    }else{
+        setTimeout(()=>{
+            numnivel.innerText="fin del juego"
+            location.reload();
+        },10000) 
+    }
+    
+    fetch('http://127.0.0.1:8000/api/simon/')
+    .then((response)=>response.json())
+    .then((data)=>{secuenciaColor = data.color;
+        secuenciaColor=data.color
+    })
+    console.log(secuenciaColor)
+    iluminar()
+}
+
+function iluminar(){
+    
+}
+
+// function validar(){
+//     if (btn === secuenciaColor) {
         
-    // }
-    // buttonClick(value){
-        
-    // }
-    // validateChonsenColor(value){
-        
-    // }
-    // fin(){
-        
-    // }
-    // showsecuencia(){
-        
-    // }
-    // toggleButtonStyle(button){
-        
-    // }
-    // reinicio(){
-        
-    // }
-    // ganar(){
-        
-    // }
-const simon = new Simon(botones, iniciojuego, nivel);
-simon.init();
+//     }else {
+//         alert("patron no coincide")
+//     }
+    
+// }
+
+//----//--//----//--//----//--//----//--//----//--//----//--
+
+//----//--//----//--//----//--//----//--//----//--//----//--
+
+
+    
+//----//--//----//--//----//--//----//--//----//--//----//--
+//ilumionarbotones
+    // siguentecolor.classList.add('active')
+    // setTimeout(()=>{
+    //     siguentecolor.classList.remove('active')
+    // },400)
+//----//--//----//--//----//--//----//--//----//--//----//--
+
+
+
+// var secuJuego;
+// if (secuJuego === undefined) {
+//   alert("no hay nada");
+// } else {
+//   alert("exito si hay contenido");
+// }

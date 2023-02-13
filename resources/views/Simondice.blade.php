@@ -21,7 +21,7 @@
                 margin-top: 3%;
                 padding-top: 5px;
                 background: hsl(175, 67%, 41%);
-                border-radius: 30px;
+                border-raniveldius: 30px;
             }
             input{
                 background-color: rgb(177, 174, 174);
@@ -31,7 +31,7 @@
                 background-color: rgba(177, 0, 177, 0.678); 
                 border-radius: 30px;
             }
-            button.inicio{
+            input{
                 width: 200px;
                 height: 50px;
                 margin: 20px;
@@ -40,7 +40,7 @@
                 border-width: 5px;
                 background-color: rgba(255, 255, 255, 0.555);
             }
-            button:active.inicio{
+            input:active.inicio{
                 box-shadow: 0px 0px 100px rgb(255, 255, 255);
             }
             button.rojo{
@@ -116,14 +116,14 @@
         <div class="prin container-fluid">
             <br>
             <div class="titulo" id="title">Simondice</div>
-            <button class="inicio" id="iniciojuego">Inicio de juego</button>
+            <input class="inicio" type="submit" name="" value="Inicio de juego" id="inicio" onclick = "inicio();">
             <h3 id="nivel"></h3>
-            <button class="boton rojo"></button>
-            <button class="boton verde"></button>
-            <button class="boton azul"></button>
-            <button class="boton amarillo"></button>
-            <button class="boton morado"></button>
-            <button class="boton naranja"></button>       
+                <button id="1" class="rojo" name="rojo" ></button>
+                <button id="2" class="verde" name="verde" ></button>
+                <button id="3" class="azul" name="azul" ></button>
+                <button id="4" class="amarillo" name="amarillo" ></button>
+                <button id="5" class="morado" name="morado" ></button>
+                <button id="6" class="naranja" name="naranja" ></button>       
             <br>
             <br>
             <a href="{{route('inicio')}}"><button class="btn btn-outline-warning rounded-pill ">Regresar</button></a>

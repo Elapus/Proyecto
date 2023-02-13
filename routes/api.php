@@ -21,4 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 // Route::get('/simon',[SimondiceController::class, 'index'])->name('simondice');
 
-Route::get('/simon','SimondiceController@index')->name('simondice');
+Route::get('/simon','SimondiceController@crearSecuencia');
+// Route:: get('/simon/secuencia', 'SimondiceController@crearSecuencia');
