@@ -23,3 +23,5 @@ Route::get('/poli','PolindromoController@index')->name('polindromo');
 Route::get('/simon','SimondiceController@index')->name('simondice');
 
 Route::get('/dibujar', 'DibujarController@index')->name('dibujar');
+
+Route::get('/granja', 'GranjaController@index')->name('granja');
