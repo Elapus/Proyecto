@@ -23,7 +23,7 @@
                 padding-left: 10px;
                 margin-top: 1%;
                 padding-top: 5px;
-                background: hsla(175, 67%, 41%, 0.500);
+                background: rgba(255, 255, 255, 0.308);
                 border: 1px solid black;
                 border-radius: 30px;
             }
@@ -85,7 +85,8 @@
             <div id="right">
                 <canvas id="lienzo" width="1000px" height="490px"></canvas>
             </div>
-            <a href="{{route('inicio')}}"><button class="btn btn-outline-warning rounded-pill ">Regresar</button></a>
+            <a href="{{route('inicio')}}">
+            <button class="btn btn-outline-warning rounded-pill" onclick="limpiar()">Regresar</button></a>
             <button class="btn btn-outline-danger rounded-pill " onclick="limpiar()">Limpiar</button>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></>
     </body>
